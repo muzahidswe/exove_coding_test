@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fi">
+   <head>
+      <title>Find the mistakes</title>
+      <style>
+         * {
+               hyphens: auto !important;
+               margin: 0;
+         }
+         body {
+               font-family: Arial, Helvetica, sans-serif;
+               font-size: 1.125rem;
+               line-height: 1.5;
+         }
+         header {
+               margin-top: 2rem;
+               text-align: center;
+         }
+         h1 {
+               font-size: 5rem;
+               line-height: 1.1;
+               margin-bottom: 2rem;
+         }
+         h2 {
+               font-size: 4rem;
+               line-height: 1.3;
+               margin-bottom: 1rem;
+         }
+         h3 {
+               font-size: 32px !important;
+               line-height: 1.3;
+         }
+         img {
+               display: block;
+               height: auto;
+               width: 100%;
+         }
+         .visually-hidden {
+               clip: rect(0 0 0 0);
+               clip-path: inset(50%);
+               height: 1px;
+               overflow: hidden;
+               position: absolute;
+               white-space: nowrap;
+               width: 1px;
+         }
+         .main-content-wrapper {
+               margin: 0 auto;
+               max-width: 75em;
+         }
+         .main-content-wrapper p, .main-content-wrapper h3 {
+               margin: 0 auto;
+               max-width: 800px;
+               padding: 0 8px;
+         }
+         .content-image {
+               margin: 2rem auto;
+         }
+         form {
+               background-color: #eaeaea;
+               margin: 2rem auto;
+               max-width: 1200px;
+               padding: 16px;
+         }
+         .column-wrapper {
+               display: grid;
+               gap: 8px;
+               grid-template-columns: 1fr 1fr;
+         }
+         label {
+               display: block;
+         }
+         .option {
+               align-items: center;
+               display: flex;
+               gap: 8px;
+         }
+         .column {
+               border: none;
+               padding: 0;
+         }
+         input {
+               margin: 8px 0;
+               padding: 4px;
+         }
+         .radios, .checkboxes {
+               margin: 8px 0;
+         }
+         .button {
+               margin-top: 1rem;
+         }
+         .box {
+               background: wheat;
+               font-size: 1.25rem;
+               padding: 3rem 4rem;
+         }
+         @media only screen and (min-width: 48em) {
+               .box-wrapper {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  margin: 3rem auto;
+                  max-width: 1152px;
+               }
+         }
+         footer {
+               background-color: #eee;
+               padding: 1rem;
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <h1>Find the mistakes</h1>
+      </header>
+      <main>
+         <div class="main-content-wrapper">
+            <p>
+               Exove is a digital agency that helps companies to achieve growth by designing and creating visually attractive, user-friendly and seamlessly working digital solutions.
+            </p>
+            <p>
+               We develop services to many kinds of companies, from listed companies to startups and media companies to universities. We use agile methodologies to find the best solutions, using service design and consulting as well as open source solutions – always looking into the future.
+            </p>
+            <img class="content-image" src="https://placekitten.com/1400/600" alt="image">
+            <h3>
+               We have also committed to <a href="https://www.exove.com/exoves-promises/" aria-label="Link">FLEXOVE and TECH-XOVE</a> promises, which are promises to work flexibility and support your wildest technology ideas.
+            </h3>
+         </div>
+         <form>
+            <label for="text">Name</label>
+            <input name="text" type="text" aria-labelledby="description" id="text"/>
+            <div id="description">Insert your first name and last name.</div>
+            <div class="column-wrapper">
+               <fieldset class="column column-first">
+                  <legend class="visually-hidden">Column first</legend>
+                  <fieldset class="radios">
+                     <legend>Choose your favorite tech</legend>
+                     <div class="option">
+                        <input type="radio" id="html" name="fav_language" value="HTML">
+                        <label for="html">HTML</label>
+                     </div>
+                     <div class="option">
+                        <input type="radio" id="css" name="fav_language" value="CSS">
+                        <label for="css">CSS</label>
+                     </div>
+                     <div class="option">
+                        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <label for="javascript">JavaScript</label>
+                     </div>
+                  </fieldset>
+               </fieldset>
+               <fieldset class="column column-second">
+                  <legend class="visually-hidden">Column second</legend>
+                  <fieldset class="checkboxes">
+                     <legend>Choose your favorite spelling</legend>
+                     <div class="option">
+                        <input type="checkbox" id="a11y" name="a11y" value="a11y">
+                        <label for="a11y">A11Y</label>
+                     </div>
+                     <div class="option">
+                        <input type="checkbox" id="accessibility" name="accessibility" value="accessibility">
+                        <label for="accessibility">Accessibility</label>
+                     </div>
+                     <div class="option">
+                        <input type="checkbox" id="web" name="web" value="web">
+                        <label for="web">Web accessibility</label>
+                     </div>
+                  </fieldset>
+               </fieldset>
+            </div>
+            <label>Choose a color:</label>
+            <select name="colors" id="colors">
+               <option value="red">Red</option>
+               <option value="blue">Blue</option>
+               <option value="green">Green</option>
+               <option value="yellow">Yellow</option>
+            </select>
+            <div>
+               <button class="button" type="submit">This submit button does nothing</button>
+            </div>
+         </form>
+         <div class="box-wrapper">
+            <img src="https://placekitten.com/400/400" alt="asd">
+            <div class="box">
+               <h2>Your success - our passion</h2>
+               <p>
+                  Our mission is to make you thrive. We create digital solutions that have instant business impact by combining customer insight, data and tech. We are passionate about our work and our solutions are always made from people to people. We challenge you to thrive now and in the future!
+               </p>
+            </div>
+         </div>
+      </main>
+      <footer>
+         <a href="https://exove.com" tabindex="5">Exove.com</a>
+      </footer>
+   </body>
+</html>

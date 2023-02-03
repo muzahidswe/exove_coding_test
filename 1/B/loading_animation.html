@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .loader {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+
+      .small-loader {
+        width: 60px;
+        height: 60px;
+      }
+
+      .fast-loader {
+        animation-duration: 1s;
+      }
+
+      .slow-loader {
+        animation-duration: 3s;
+      }
+
+      .blue-loader {
+        border-top: 16px solid #3498db;
+      }
+
+      .green-loader {
+        border-top: 16px solid green;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="loader" :class="{ 'small-loader': size === 'small', 'fast-loader': speed === 'fast', 'slow-loader': speed === 'slow', 'blue-loader': color === 'blue', 'green-loader': color === 'green' }"></div>
+    </div>
+  </body>
+</html>
